@@ -1,0 +1,19 @@
+.textareaBox {
+    display: flex;
+    flex-direction: column;
+    gap: 0.35rem;
+    font-family: var(--font-primary);
+
+    textarea {
+        flex-grow: 1;
+        resize: none;
+        
+        font-size: 1rem;
+        font-weight: 400;
+        
+        padding: 0.875rem 1.375rem;
+        height: 7.9375rem;
+
+        background: var(--color-gray);
+    }
+}

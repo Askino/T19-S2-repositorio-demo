@@ -2,7 +2,7 @@ import { useState } from "react";
 import { Input } from "../Input";
 import { Textarea } from "../TextArea";
 
-export const TodoForm = () => {
+export const TodoForm = ({addNote}) => {
   const [title, setTitle] = useState("");
   // const [password, setPassword] = useState("");
   const [message, setMessage] = useState("");
@@ -10,12 +10,17 @@ export const TodoForm = () => {
   const submit = (e) => {
     e.preventDefault();
     // console.log({ title, password, message });
-    console.log({ title, message });
 
-    setTitle("");
-    setMessage("");
+    if(title !== "" && message !== "") {
+      addNote(title, message);
+      
+      setTitle("");
+      setMessage("");
+    }
+
     // setPassword("");
   };
+
 
   return (
     <div>

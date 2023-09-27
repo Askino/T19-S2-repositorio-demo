@@ -1,6 +1,8 @@
+import styles from "./style.module.scss"
+
 export const Textarea = ({ label, id, placeholder, value, setValue }) => {
   return (
-    <div>
+    <div className={styles.textareaBox}>
       <label htmlFor={id}>{label}</label>
       <textarea
         name={id}
