@@ -1,0 +1,22 @@
+.todoCard {
+    padding: 1.6875rem 2.3125rem;
+    box-shadow: 0px 4px 12px 0px rgba(0, 0, 0, 0.12);
+    background: var(--color-white);
+    border-bottom: 5px solid;
+
+    h2 {
+        margin-bottom: 1rem;
+    }
+
+    button {
+        margin-top: 1.875rem;
+    }
+
+    &.blue {
+        border-color: var(--color-blue);
+    }
+
+    &.orange {
+        border-color: var(--color-orange);
+    }
+}

@@ -2,13 +2,16 @@ import { TodoForm } from "../../components/forms/TodoForm";
 import { TodoList } from "../../components/forms/TodoList";
 import { useState } from "react";
 
+import styles from "./style.module.scss"
+import { Header } from "../../components/Header";
+
 export const HomePage = () => {
   const [listNotes, setListNotes] = useState([])
 
   //{ title, message }
-  const addNote = (title, message) => {
+  const addNote = (title, message, category) => {
     const id = crypto.randomUUID();
-    const newNote = {title, message, id};
+    const newNote = {title, message, category, id};
 
     setListNotes([...listNotes, newNote]);
     console.log(listNotes);
@@ -25,9 +28,12 @@ export const HomePage = () => {
   }
 
   return (
-    <main>
+    <>
+    <Header/>
+    <main className={styles.container}>
       <TodoForm addNote={addNote} />
       <TodoList listNotes={listNotes} removeNote={removeNote}/>
     </main>
+    </>
   );
 };

@@ -1,18 +1,20 @@
 import { useState } from "react";
 import { Input } from "../Input";
 import { Textarea } from "../TextArea";
+import { Select } from "../Select";
 
 export const TodoForm = ({addNote}) => {
   const [title, setTitle] = useState("");
   // const [password, setPassword] = useState("");
   const [message, setMessage] = useState("");
+  const [category, setCategory] = useState("tarefas")
 
   const submit = (e) => {
     e.preventDefault();
     // console.log({ title, password, message });
 
     if(title !== "" && message !== "") {
-      addNote(title, message);
+      addNote(title, message, category);
       
       setTitle("");
       setMessage("");
@@ -42,6 +44,11 @@ export const TodoForm = ({addNote}) => {
           value={message}
           setValue={setMessage}
         />
+
+        <Select id="category" label="Categoria: " setValue={setCategory} value={category}>
+          <option value="tarefas">Tarefas</option>
+          <option value="notas">Notas</option>
+        </Select>
 
         {/* <Input
         label="Senha: "
