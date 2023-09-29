@@ -1,6 +1,6 @@
 import { NoteNumber } from "../../NoteNumber";
 import { TodoCard } from "./TodoCard";
-
+import styles from "./style.module.scss"
 // Condicionais tradicionais -> não são aceitas no HTML do JSX
 // if(noteList.length > 0) {
 //   <ul></ul>            
@@ -25,7 +25,7 @@ export const TodoList = ({ listNotes, removeNote }) => {
   //   console.log(removeNote)
 
   return (
-    <div>
+    <div className={styles.todoList} >
       <h2 className="title one">Lista de notas</h2>
       <NoteNumber listNotes={listNotes} />
 
