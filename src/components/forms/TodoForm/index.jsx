@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { Input } from "../Input";
-import { Textarea } from "../TextArea";
+import { Textarea } from "../Textarea";
 import { Select } from "../Select";
 import styles from "./style.module.scss"
 

@@ -1,4 +1,4 @@
-import lexNoteImg from "../../assets/lexNote.svg"
+import lexNoteImg from "../../assets/LexNote.svg"
 import styles from "./style.module.scss"
 
 export const Header = () => {
