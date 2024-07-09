@@ -1,4 +1,4 @@
-import { useState } from "react";
+ import { useState } from "react";
 import { TotalValue } from "./TotalValue";
 
 function App() {
@@ -54,7 +54,7 @@ function App() {
       <h2>{count.toLocaleString("pt-BR", {style:"currency", currency: "BRL"})}</h2> */}
       </>
       <>
-        <ul>
+        <ul key={listFruits.id}>
           {listFruits.map((fruit) => {
             return (
               <li key={fruit.id}>
@@ -71,7 +71,7 @@ function App() {
 
         <TotalValue list={listFruits} />
         <button onClick={addFruit}>Adicionar morango</button>
-        {/* <button onClick={() => removeFruit(3)}>Remover Uva</button> */}
+        <button onClick={() => removeFruit(3)}>Remover Uva</button>
       </>
     </>
   );
